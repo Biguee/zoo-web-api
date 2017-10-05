@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+---
+#spring:
+#  profiles: production
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/training
+#    username: justynasalacinska
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
