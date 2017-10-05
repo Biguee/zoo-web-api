@@ -13,20 +13,20 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    Long id;
+    private Long id;
     @Column
-    String name;
+    private String name;
     @Column
-    Integer amount;
-    @Column
-    @Enumerated(EnumType.STRING)
-    Kind kind;
+    private Integer amount;
     @Column
     @Enumerated(EnumType.STRING)
-    StatusInTheWild statusInTheWild;
+    private Kind kind;
+    @Column(name = "statusinthewild")
+    @Enumerated(EnumType.STRING)
+    private StatusInTheWild statusInTheWild;
+    @Column(name = "lifespan")
+    private Integer lifeSpan;
     @Column
-    Integer lifeSpan;
-    @Column
-    ArrayList<String> range;
+    private String range;
 
 }
