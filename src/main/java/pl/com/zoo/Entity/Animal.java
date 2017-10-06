@@ -30,15 +30,15 @@ public class Animal {
     @Column(name = "worldrange")
     private String worldRange;
 
-//    public Animal(String name, Integer amount, Kind kind, StatusInTheWild statusInTheWild, Integer lifeSpan, String range) {
-//        this.name = name;
-//        this.amount = amount;
-//        this.kind = kind;
-//        this.statusInTheWild = statusInTheWild;
-//        this.lifeSpan = lifeSpan;
-//        this.range = range;
-//    }
-//
-//    public Animal() {
-//    }
+    public Animal(String name, Integer amount, Kind kind, StatusInTheWild statusInTheWild, Integer lifeSpan, String range) {
+        this.name = name;
+        this.amount = amount;
+        this.kind = kind;
+        this.statusInTheWild = statusInTheWild;
+        this.lifeSpan = lifeSpan;
+        this.worldRange = worldRange;
+    }
+
+    public Animal() {
+    }
 }
