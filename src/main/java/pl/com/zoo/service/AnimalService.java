@@ -1,8 +1,11 @@
 package pl.com.zoo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import pl.com.zoo.Entity.Animal;
+import pl.com.zoo.common.ResultPage;
 import pl.com.zoo.repository.AnimalRepository;
 
 @Service
@@ -29,6 +32,11 @@ public class AnimalService {
 
     public Iterable<Animal> allAnimals(){
         return animalRepository.findAll();
+    }
+
+    public ResultPage<Animal> getAnimal(int pageNumber, int pageSize) {
+        Page<Animal> animalPage = animalRepository.findAll(new PageRequest(pageNumber, pageSize));
+        return new ResultPage<>(animalPage.getContent(), animalPage.getNumber(), animalPage.getTotalPages());
     }
 
 }

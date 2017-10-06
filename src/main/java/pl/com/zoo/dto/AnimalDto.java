@@ -7,7 +7,7 @@ import pl.com.zoo.Entity.Kind;
 import pl.com.zoo.Entity.StatusInTheWild;
 
 @Data
-@ApiModel(value = "Animals")
+@ApiModel(value = "Animal")
 public class AnimalDto {
 
     @ApiModelProperty
