@@ -1,0 +1,13 @@
+<div class="card animal-card" (click)="select()">
+  <div class="card-block">
+    <table>
+      <tr>
+        <td><h4 class="card-title" [class.active]="isSelected">{{ animal.name }}</h4></td>
+
+      </tr>
+
+
+    </table>
+  </div>
+  <ng-content select=[animal-header]></ng-content>
+</div>

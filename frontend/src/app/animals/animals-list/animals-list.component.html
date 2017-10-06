@@ -1,0 +1,22 @@
+<h2 class="title">Animals: </h2>
+<div class="row">
+
+  <div class="col-md-4">
+    <app-animals-form *ngIf="edited != null" [animal]="edited" (save)="save($event)" (cancel)="cancel()"></app-animals-form>
+  </div>
+
+  <div class="col-md-8">
+    <div class="row justify-content-around">
+      <app-animals-card *ngFor="let animal of animals" [animal]="animal" [isSelected]="animal == selected" (selected)="select(animal)">
+
+      </app-animals-card>
+    </div>
+  </div>
+
+
+
+</div>
+
+<button type="button" routerLink="../addAnimal" class="btn btn-danger custom">Add</button>
+
+

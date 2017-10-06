@@ -1,0 +1,20 @@
+<form #animalForm="ngForm" novalidate="true">
+
+  <div class="card animal-form-card">
+    <div class="card-header text-center">Animal</div>
+    <div class="game-form">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="animal.name">
+      </div>
+    </div>
+    <div>
+      <button class="btn" type="submit" (click)="addAnimal()">
+        Add!
+      </button>
+    </div>
+  </div>
+
+  <button type="button" routerLink="../animals-list" class="btn btn-danger custom">list</button>
+
+</form>
