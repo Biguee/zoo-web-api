@@ -7,12 +7,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-security:
-  oauth2:
-    resource:
-      filter-order: 3
+
 
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
 ---
 spring:
   profiles: production
