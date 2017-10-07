@@ -1,22 +1,36 @@
-<h2 class="title">Animals: </h2>
+<h2 class="title" style="text-align: center">ANIMALS</h2>
 <div class="row">
 
-  <div class="col-md-4">
-    <app-animals-form *ngIf="edited != null" [animal]="edited" (save)="save($event)" (cancel)="cancel()"></app-animals-form>
-  </div>
+<div class="col-md-1"></div>
 
   <div class="col-md-8">
     <div class="row justify-content-around">
-      <app-animals-card *ngFor="let animal of animals" [animal]="animal" [isSelected]="animal == selected" (selected)="select(animal)">
-
-      </app-animals-card>
+      <table style="display: grid">
+        <thead>
+        <tr>
+          <td>Name</td>
+          <td>Amount in zoo</td>
+          <td>Class</td>
+          <td>Status in the wild</td>
+          <td>Life span</td>
+          <td>Range</td>
+        </tr>
+        </thead>
+        <tbody>
+      <app-animals-card *ngFor="let animal of animals" [animal]="animal" [isSelected]="animal == selected" (selected)="select(animal)"></app-animals-card>
+        </tbody>
+      </table>
     </div>
+  </div>
+
+  <div class="col-md-2">
+    <app-animals-form *ngIf="edited != null" [animal]="edited" (save)="save($event)" (cancel)="cancel()"></app-animals-form>
   </div>
 
 
 
 </div>
 
-<button type="button" routerLink="../addAnimal" class="btn btn-danger custom">Add</button>
+
 
 

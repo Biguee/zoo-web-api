@@ -32,6 +32,10 @@ export class AnimalsFormComponent implements OnInit {
       this.animal = animal || {}
     }
   }
+  private refresh() {
+    this.animalService.getAll()
+      .subscribe(animals => this.animals = animals.animals)
+  }
 
   delete(){
     this.animalsService.delete(this.animal.id)
@@ -41,6 +45,7 @@ export class AnimalsFormComponent implements OnInit {
   update(){
     this.animalsService.update(this.animal)
       .subscribe(() => this.router.navigateByUrl("/animals-list"))
+    this.refresh()
   }
 
 

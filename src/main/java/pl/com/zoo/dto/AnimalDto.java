@@ -23,6 +23,6 @@ public class AnimalDto {
     @ApiModelProperty
     private Integer lifeSpan;
     @ApiModelProperty
-    private String range;
+    private String worldRange;
 
 }

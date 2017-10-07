@@ -1,0 +1,25 @@
+table {
+
+}
+td {
+  padding: 10px 0;
+  width: 210px ;
+  text-align: center;
+}
+table {
+  border:none;
+  border-collapse: collapse;
+}
+
+table td {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+table td:first-child {
+  border-left: none;
+}
+
+table td:last-child {
+  border-right: none;
+}

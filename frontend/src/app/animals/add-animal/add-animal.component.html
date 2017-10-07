@@ -1,20 +1,62 @@
+<div class="col-md-3"></div>
+<div class="col-md-4">
 <form #animalForm="ngForm" novalidate="true">
-
   <div class="card animal-form-card">
-    <div class="card-header text-center">Animal</div>
+    <div class="card-header text-center"></div>
     <div class="game-form">
       <div class="form-group">
         <label>Name:</label>
         <input type="text" name="name" class="form-control" [(ngModel)]="animal.name">
       </div>
     </div>
+
+    <div class="form-group">
+      <label>Class:</label><br>
+      <select name="kind" [(ngModel)]="animal.kind">
+        <option value="BIRD">bird</option>
+        <option value="AMPHIBIAN">amphibian</option>
+        <option value="MAMMAL">mammal</option>
+        <option value="REPTILE">reptile</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Status in the wild:</label><br>
+      <select name="kind" [(ngModel)]="animal.statusInTheWild">
+        <option value="EXTINCT">extinct</option>
+        <option value="AT_RISK">at risk</option>
+        <option value="NOT_THREATENED">not threatened</option>
+        <option value="CRITICALLY_ENDANGERED">critically endangered</option>
+        <option value="ENDANGERED">endangered</option>
+      </select>
+    </div>
+
+    <div class="game-form">
+      <div class="form-group">
+        <label>Amount:</label>
+        <input type="number" name="amount" class="form-control" [(ngModel)]="animal.amount">
+      </div>
+    </div>
+
+    <div class="game-form">
+      <div class="form-group">
+        <label>Life span:</label>
+        <input type="number" name="lifeSpan" class="form-control" [(ngModel)]="animal.lifeSpan">
+      </div>
+    </div>
+
+    <div class="game-form">
+      <div class="form-group">
+        <label>Range:</label>
+        <input type="text" name="worldRange" class="form-control" [(ngModel)]="animal.worldRange">
+      </div>
+    </div>
+
     <div>
       <button class="btn" type="submit" (click)="addAnimal()">
         Add!
       </button>
     </div>
   </div>
-
-  <button type="button" routerLink="../animals-list" class="btn btn-danger custom">list</button>
-
 </form>
+</div>
